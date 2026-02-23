@@ -1,0 +1,7 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "HIGHEST PRIORITY: If the staged file path matches <algorithm-folder>/<DD-MM-YYYY>.ts (e.g. sliding-window/23-02-2026.ts), do NOT read the file or summarize its contents. Use ONLY this format: practice(<folder>): on <DD-MM-YYYY>. Example: practice(sliding-window): on 23-02-2026"
+    }
+  ],
+}

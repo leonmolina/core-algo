@@ -2,15 +2,7 @@
 
 ## Commit Messages
 
-> **STOP — before generating any commit message, check if the staged file path matches `<folder>/<DD-MM-YYYY>.ts` (e.g. `sliding-window/23-02-2026.ts`). If it does, skip all other rules, do NOT open or read the file, and use ONLY this format:**
->
-> ```
-> feat(<folder>): add practice on <DD-MM-YYYY>
-> ```
->
-> Example: `feat(sliding-window): add practice on 23-02-2026`
-
-All other commit messages must follow the Conventional Commits specification.
+All commit messages must follow the Conventional Commits specification.
 
 ### Format
 
@@ -33,23 +25,7 @@ All other commit messages must follow the Conventional Commits specification.
 - **test**: Adding missing tests or correcting existing tests
 - **chore**: Changes to the build process or auxiliary tools and libraries
 
-### Practice File Rule — HIGHEST PRIORITY
-
-> **If the committed file matches the pattern `<algorithm-folder>/<DD-MM-YYYY>.ts`, this rule overrides everything else. Do NOT read the file. Do NOT summarize its contents. Use only the folder name and the date.**
-
-Pattern:
-
-```
-feat(<algorithm>): add practice on <date>
-```
-
-Example:
-
-```
-feat(sliding-window): add practice on 23-02-2026
-```
-
-### Examples (non-practice files)
+### Examples
 
 ```
 feat(binary-search): add iterative binary search implementation
