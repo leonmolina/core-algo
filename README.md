@@ -45,6 +45,13 @@ This creates `bfs/23-02-2026.ts` (today's date) from the boilerplate. Open it, s
 npx algo check bfs
 ```
 
+You can also omit the algorithm name and the CLI will prompt you to select one interactively:
+
+```bash
+npx algo add
+npx algo check
+```
+
 To run a specific past session:
 
 ```bash
@@ -57,8 +64,8 @@ The runner prints the output of all your `console.log` / `console.assert` calls.
 
 | Command | Description |
 |---|---|
-| `npx algo add <algo>` | Create today's practice file from boilerplate |
-| `npx algo check <algo>` | Run today's practice file |
+| `npx algo add [algo]` | Create today's practice file from boilerplate (prompts if omitted) |
+| `npx algo check [algo]` | Run today's practice file (prompts if omitted) |
 | `npx algo check <algo> <date>` | Run a specific date's file |
 | `npx algo help` | Print usage and algorithm list |
 
