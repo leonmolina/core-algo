@@ -64,6 +64,7 @@ async function promptAlgorithm(): Promise<string> {
   return select({
     message: "Select an algorithm",
     choices: ALGORITHMS.map((a) => ({ name: a, value: a })),
+    pageSize: ALGORITHMS.length,
   });
 }
 
