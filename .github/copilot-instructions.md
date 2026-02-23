@@ -36,6 +36,20 @@ test(dfs): add edge case tests for cyclic graphs
 chore(deps): update TypeScript to v5.0
 ```
 
+### Practice File Rule
+
+When the committed file is a date-named file inside an algorithm folder (e.g., `sliding-window/23-02-2026.ts`), the commit message must follow this pattern — **do not inspect or summarize the file contents**:
+
+```
+feat(<algorithm>): add practice on <date>
+```
+
+Example:
+
+```
+feat(sliding-window): add practice on 23-02-2026
+```
+
 ### Rules
 
 1. Use lowercase for type and scope
