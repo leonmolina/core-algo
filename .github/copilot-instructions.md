@@ -2,7 +2,15 @@
 
 ## Commit Messages
 
-All commit messages must follow the Conventional Commits specification.
+> **STOP — before generating any commit message, check if the staged file path matches `<folder>/<DD-MM-YYYY>.ts` (e.g. `sliding-window/23-02-2026.ts`). If it does, skip all other rules, do NOT open or read the file, and use ONLY this format:**
+>
+> ```
+> feat(<folder>): add practice on <DD-MM-YYYY>
+> ```
+>
+> Example: `feat(sliding-window): add practice on 23-02-2026`
+
+All other commit messages must follow the Conventional Commits specification.
 
 ### Format
 
