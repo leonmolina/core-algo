@@ -2,6 +2,7 @@
 import { existsSync, copyFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 import select from "@inquirer/select";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -106,6 +107,7 @@ if (subcommand === "add") {
   copyFileSync(boilerplate, dest);
   console.log(`Created: ${selectedAlgo}/${date}.ts`);
   console.log(`\nWhen you're ready: npx algo check ${selectedAlgo}`);
+  execSync(`code "${dest}"`);
   process.exit(0);
 }
 
