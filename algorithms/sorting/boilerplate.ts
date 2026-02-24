@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Sorting Boilerplate ──────────────────────────────────────────────────────
 // Classic problem: implement merge sort.

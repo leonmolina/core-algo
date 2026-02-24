@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Dijkstra Boilerplate ─────────────────────────────────────────────────────
 // Classic problem: single-source shortest path.

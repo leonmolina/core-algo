@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── BFS Boilerplate ─────────────────────────────────────────────────────────
 // Classic problem: find the shortest path length between `start` and `end`

@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Union Find Boilerplate ───────────────────────────────────────────────────
 // Classic problem: number of connected components.

@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Backtracking Boilerplate ─────────────────────────────────────────────────
 // Classic problem: given an array of distinct integers, return all permutations.

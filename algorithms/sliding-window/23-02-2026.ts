@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Sliding Window Boilerplate ───────────────────────────────────────────────
 // Classic problem: given an integer array `nums` and integer `k`,
@@ -6,8 +6,19 @@ import { check } from "../utils";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const maxSubarraySum = (nums: number[], k: number): number => {
-  // TODO: implement
-  return 0;
+  if (!nums.length) return 0;
+  let left = 0, right = k-1;
+  let max = -Infinity; // I was starting it at 0, but then the negatives were failing (Test 4)
+  while (right <= nums.length - 1) { // TODO this is not optimal solution, check next time
+    let windowSum = 0;
+    for (let i = left; i <= right; i++) {
+      windowSum += nums[i]
+    }
+    max = Math.max(max, windowSum)
+    right++
+    left++
+  }
+  return max;
 };
 
 // ─── Test cases ──────────────────────────────────────────────────────────────

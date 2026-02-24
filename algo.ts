@@ -85,7 +85,7 @@ if (subcommand !== "add" && subcommand !== "check") {
 const selectedAlgo = algo ?? await promptAlgorithm();
 if (algo) assertValidAlgo(selectedAlgo);
 
-const algoDir = resolve(__dirname, selectedAlgo);
+const algoDir = resolve(__dirname, "algorithms", selectedAlgo);
 const date = dateArg ?? todayDate();
 
 // ─── add ──────────────────────────────────────────────────────────────────────
@@ -98,16 +98,21 @@ if (subcommand === "add") {
     process.exit(1);
   }
 
+  let effectiveDest = dest;
+  let effectiveDate = date;
   if (existsSync(dest)) {
-    console.log(`Already exists: ${selectedAlgo}/${date}.ts`);
-    console.log(`Run it with: npx algo check ${selectedAlgo} ${date}`);
-    process.exit(0);
+    let counter = 1;
+    while (existsSync(resolve(algoDir, `${date}(${counter}).ts`))) {
+      counter++;
+    }
+    effectiveDate = `${date}(${counter})`;
+    effectiveDest = resolve(algoDir, `${effectiveDate}.ts`);
   }
 
-  copyFileSync(boilerplate, dest);
-  console.log(`Created: ${selectedAlgo}/${date}.ts`);
-  console.log(`\nWhen you're ready: npx algo check ${selectedAlgo}`);
-  execSync(`code "${dest}"`);
+  copyFileSync(boilerplate, effectiveDest);
+  console.log(`Created: ${selectedAlgo}/${effectiveDate}.ts`);
+  console.log(`\nWhen you're ready: npx algo check ${selectedAlgo} ${effectiveDate}`);
+  execSync(`code "${effectiveDest}"`);
   process.exit(0);
 }
 

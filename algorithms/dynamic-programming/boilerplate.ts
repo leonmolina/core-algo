@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Dynamic Programming Boilerplate ─────────────────────────────────────────
 // Classic problem: climbing stairs.

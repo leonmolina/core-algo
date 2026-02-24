@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Binary Search Boilerplate ───────────────────────────────────────────────
 // Classic problem: given a sorted array of distinct integers and a target,

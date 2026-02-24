@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Two Pointers Boilerplate ─────────────────────────────────────────────────
 // Classic problem: given a sorted array and a target sum, return the indices
