@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── DFS Boilerplate ─────────────────────────────────────────────────────────
 // Classic problem: count the number of islands in a 2-D grid.

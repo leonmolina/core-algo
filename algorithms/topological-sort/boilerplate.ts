@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Topological Sort Boilerplate ────────────────────────────────────────────
 // Classic problem: Course Schedule.

@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Sliding Window Boilerplate ───────────────────────────────────────────────
 // Classic problem: given an integer array `nums` and integer `k`,

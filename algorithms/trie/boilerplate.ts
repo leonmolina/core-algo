@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Trie Boilerplate ─────────────────────────────────────────────────────────
 // Classic problem: implement a Trie (Prefix Tree) with:

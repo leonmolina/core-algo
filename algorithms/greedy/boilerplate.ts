@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Greedy Boilerplate ───────────────────────────────────────────────────────
 // Classic problem: Jump Game.

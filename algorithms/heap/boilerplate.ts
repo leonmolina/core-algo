@@ -1,4 +1,4 @@
-import { check } from "../utils";
+import { check } from "@utils";
 
 // ─── Heap Boilerplate ─────────────────────────────────────────────────────────
 // Classic problem: find the k-th largest element in an unsorted array.
