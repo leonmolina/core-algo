@@ -20,7 +20,7 @@ check("Test 1",
 
 // 2. Target at the boundaries
 check("Test 2",
-  JSON.stringify(twoSum([1, 3, 5, 7, 12], 13)) === JSON.stringify([2, 4])
+  JSON.stringify(twoSum([1, 3, 5, 7, 12], 13)) === JSON.stringify([0, 4])
 );
 
 // 3. Adjacent elements
@@ -35,5 +35,5 @@ check("Test 4",
 
 // 5. Larger array
 check("Test 5",
-  JSON.stringify(twoSum([-3, -1, 0, 2, 4, 7], 1)) === JSON.stringify([1, 4])
+  JSON.stringify(twoSum([-3, -1, 0, 2, 4, 7], 1)) === JSON.stringify([1, 3])
 );
