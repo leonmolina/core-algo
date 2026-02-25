@@ -14,7 +14,7 @@ const shortestPath = (
   if (!graph.size) return -1;
   if (start === end) return 0;
   const visited = new Set([start]);
-  let queue: [number, number][] = [[start, 0]];
+  let queue: [number, number][] = [[start, 0]]; // [node, distance][]
   let head = 0;
 
   // This change was suggested by AI since Array.shift is O(n)
