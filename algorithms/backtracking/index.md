@@ -1,5 +1,9 @@
 # Backtracking
 
+## Leetcode to practice
+- [78 - Subsets](https://leetcode.com/problems/subsets/description/)
+- [46 - Permutations](https://leetcode.com/problems/permutations/description/)
+
 ## Concept
 
 Backtracking is a refined brute-force approach. It builds candidates incrementally and **abandons** ("backtracks") a path as soon as it determines that the path cannot possibly lead to a valid solution.
