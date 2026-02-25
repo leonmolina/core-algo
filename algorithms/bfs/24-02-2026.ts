@@ -18,7 +18,7 @@ const shortestPath = (
   let head = 0;
 
   // This change was suggested by AI since Array.shift is O(n)
-  // while (head < queue.length) {
+  // while (queue.length) {
     // const [node, distance] = queue.shift()!;
   while (head < queue.length) {
     const [node, distance] = queue[head++];
