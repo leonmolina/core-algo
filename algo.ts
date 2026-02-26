@@ -4,6 +4,7 @@ import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
 import select from "@inquirer/select";
+import { findLatestPracticeFile } from "./utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -116,16 +117,18 @@ if (subcommand === "add") {
   process.exit(0);
 }
 
-// ─── check ────────────────────────────────────────────────────────────────────
-const filePath = resolve(algoDir, `${date}.ts`);
 
-if (!existsSync(filePath)) {
-  console.error(`Practice file not found: ${selectedAlgo}/${date}.ts`);
+// ─── check ────────────────────────────────────────────────────────────────────
+const latestFilePath = findLatestPracticeFile(algoDir, date);
+
+if (!latestFilePath || !existsSync(latestFilePath)) {
+  console.error(`Practice file not found for: ${selectedAlgo}/${date}.ts`);
   if (!dateArg) {
     console.error(`\nCreate today's file first:\n  npx algo add ${selectedAlgo}`);
   }
   process.exit(1);
 }
 
-console.log(`Checking: ${selectedAlgo}/${date}.ts\n`);
-await import(filePath);
+const shownFile = latestFilePath.split("/").pop();
+console.log(`Checking: ${selectedAlgo}/${shownFile}\n`);
+await import(latestFilePath);
